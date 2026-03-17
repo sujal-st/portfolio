@@ -16,6 +16,7 @@
 
   /* bg-main utility */
   --color-main-bg: var(--bg-color);
+  --color-nav-main-bg: var(--primary-nav-bg);
 }
 
 :root {
@@ -26,13 +27,21 @@
   --primary-btn-color: #6102E0;
   --secondary-btn-color: #101828;
   --primary-btn-hover-color: #4800C6;
+
+  /* mobile nav css */
+  --primary-nav-bg: #101828;
 }
 
 /* light mode */
 .light {
-  --primary-text-color: #374151; 
+  --primary-text-color: #101828; 
   --secondary-text-color: #6102E0;
+  --ternary-text-color: #282F3E;
+  --secondary-btn-color: #D0B3F6;
   --bg-color: #EFE6FC;
+  
+  /* mobile nav */
+  --primary-nav-bg: #D0B3F6;
 }
 
 body{
