@@ -17,6 +17,7 @@ function Navbar() {
     ]
 
     return (
+        <>
         <nav className='max-w-5xl mx-auto mt-5 flex items-center justify-between px-5 overflow-clip'>
             <NavLink to="/" className='font-bold text-xl md:text-3xl text-primary'>Sujal Sthapit</NavLink>
 
@@ -39,8 +40,9 @@ function Navbar() {
                     <MenuIcon fontSize='large' className='flex! md:hidden! text-primary cursor-pointer' />
                 </button>
             </div>
+        </nav>
 
-            <div className={`h-full w-60 px-4 py-5 absolute top-0 right-0 bg-nav-main-bg text-base text-primary flex flex-col items-start space-y-5 md:hidden ${menu === false ? "translate-x-500" : "translate-x-0"} transition duration-300`}>
+        <div className={`h-screen w-60 px-4 py-5 fixed top-0 right-0 z-50 bg-nav-main-bg text-base text-primary flex flex-col items-start space-y-5 md:hidden ${menu === false ? "translate-x-full" : "translate-x-0"} transition duration-300`}>
                 <button onClick={() => setMenu(false)} className='w-fit self-end'>
                     <CloseIcon fontSize='large' className='self-end cursor-pointer' />
                 </button>
@@ -50,9 +52,7 @@ function Navbar() {
                     ))
                 }
             </div>
-
-
-        </nav>
+        </>
     )
 }
 
