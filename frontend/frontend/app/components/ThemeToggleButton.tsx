@@ -20,10 +20,10 @@ function ThemeToggleButton() {
     return (
         <div className='rounded-full px-4 py-1 flex items-center gap-4 duration-700 ease-in-out'>
             <button onClick={()=>toggleTheme("light")}>
-                <LightModeIcon fontSize='medium' className={`${portTheme === "light" ? 'text-secondary' : 'text-white'} rounded-full cursor-pointer`} />
+                <LightModeIcon fontSize='medium' className={`${portTheme === "light" ? 'text-secondary' : 'text-white'} rounded-full cursor-pointer hover:text-nav-hover-text hover:scale-105 transition duration-700 hover:shadow-black`} />
             </button>
             <button onClick={()=>toggleTheme("dark")}>
-                <DarkModeIcon fontSize='medium' className={`${portTheme === "dark" ? 'text-secondary' : 'text-white'} rounded-full cursor-pointer`} />
+                <DarkModeIcon fontSize='medium' className={`${portTheme === "dark" ? 'text-secondary' : 'text-white'} rounded-full cursor-pointer hover:text-nav-hover-text hover:scale-105 transition duration-700 hover:shadow-black`} />
             </button>
         </div>
     )
