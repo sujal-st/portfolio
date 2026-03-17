@@ -3,16 +3,17 @@ import { NavLink } from 'react-router'
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import NavOption from './NavOption';
+import ThemeToggleButton from './ThemeToggleButton';
 
 function Navbar() {
 
     const [menu, setMenu] = useState(false)
 
-    const navOptions=[
-        {   href:'#about',optionName: 'About'},
-        {   href:'#projects',optionName: 'Projects'},
-        {   href:'#stacks',optionName: 'Stacks'},
-        {   href:'#contact',optionName: 'Contact'},
+    const navOptions = [
+        { href: '#about', optionName: 'About' },
+        { href: '#projects', optionName: 'Projects' },
+        { href: '#stacks', optionName: 'Stacks' },
+        { href: '#contact', optionName: 'Contact' },
     ]
 
     return (
@@ -20,12 +21,13 @@ function Navbar() {
             <NavLink to="/" className='font-bold text-xl md:text-3xl text-primary'>Sujal Sthapit</NavLink>
 
             {/* large screen */}
-            <div className='hidden md:flex mt-2 bg-gray-900 px-5 py-2 w-fit mx-auto border-2 border-gray-500 rounded-4xl items-center gap-5 text-primary text-md'>
+            <div className='hidden md:flex mt-2 bg-nav-main-bg px-5 py-2 w-fit mx-auto border-2 border-gray-500 rounded-4xl items-center gap-5 text-primary text-md'>
                 <div className='flex gap-10'>
-                    {navOptions.map((o)=>(
-                        <NavOption key={o.href} option={o}/>
+                    {navOptions.map((o) => (
+                        <NavOption key={o.href} option={o} />
                     ))}
                 </div>
+                <ThemeToggleButton />
             </div>
 
             {/* mobile version */}
@@ -38,8 +40,8 @@ function Navbar() {
                     <CloseIcon fontSize='large' className='self-end' />
                 </button>
                 {
-                    navOptions.map((o)=>(
-                        <NavOption key={o.href} option={o}/>
+                    navOptions.map((o) => (
+                        <NavOption key={o.href} option={o} />
                     ))
                 }
             </div>

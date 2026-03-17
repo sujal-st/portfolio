@@ -19,7 +19,7 @@
   --color-nav-main-bg: var(--primary-nav-bg);
 }
 
-:root {
+.dark {
   --primary-text-color: #d1d5dc;
   --secondary-text-color: #6102E0;
   --ternary-text-color: #8e8e8e;
@@ -36,7 +36,7 @@
 .light {
   --primary-text-color: #101828; 
   --secondary-text-color: #6102E0;
-  --ternary-text-color: #282F3E;
+  --ternary-text-color: #404653;
   --secondary-btn-color: #D0B3F6;
   --bg-color: #EFE6FC;
   
@@ -46,6 +46,6 @@
 
 body{
   background-color: var(--bg-color);
-  color: var(--primary-color);
-  transition: background-color 0.2s ease-in-out;
+  color: var(--primary-text-color);
+  transition: all 0.2s ease-in-out;
 }
