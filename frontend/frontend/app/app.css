@@ -17,6 +17,7 @@
   /* bg-main utility */
   --color-main-bg: var(--bg-color);
   --color-nav-main-bg: var(--primary-nav-bg);
+  --color-nav-hover-text: var(--nav-text-hover)
 }
 
 .dark {
@@ -27,6 +28,7 @@
   --primary-btn-color: #6102E0;
   --secondary-btn-color: #101828;
   --primary-btn-hover-color: #4800C6;
+  --nav-text-hover:#D0B3F6;
 
   /* mobile nav css */
   --primary-nav-bg: #101828;
@@ -38,7 +40,9 @@
   --secondary-text-color: #6102E0;
   --ternary-text-color: #404653;
   --secondary-btn-color: #D0B3F6;
+  --primary-btn-hover-color: #4800C6;
   --bg-color: #EFE6FC;
+  --nav-text-hover:#2E00AD;
   
   /* mobile nav */
   --primary-nav-bg: #D0B3F6;

@@ -1,33 +1,28 @@
 import { createContext, useState, useEffect,useContext } from "react";
 
-export type Theme = "dark" | "light";
+type Theme = "dark" | "light"
 
 type ThemeContextType = {
     portTheme: Theme;
-    toggleTheme: (theme: Theme) => void
+    toggleTheme: (t:Theme) => void
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 const PortThemeProvider = ({ children }: { children: React.ReactNode }) => {
-    const [portTheme, setTheme] = useState<Theme>("dark");
+    const [portTheme, setTheme] = useState<Theme>(
+        ()=>(typeof window!=="undefined"
+            ? localStorage.getItem("theme") ?? "dark" 
+            : "dark") as Theme
+    );
 
-    useEffect(() => {
+    useEffect(()=>{
+        document.documentElement.classList.toggle("light", portTheme==="light");
+        document.documentElement.classList.toggle("dark", portTheme==="dark");
+        localStorage.setItem("theme",portTheme);
+    },[portTheme])
 
-        const root = window.document.documentElement;
-
-        root.classList.toggle("light", portTheme === "light");
-        root.classList.toggle("dark", portTheme === "dark");
-
-        localStorage.setItem("theme", portTheme);
-        
-        console.log(JSON.stringify(localStorage.getItem("theme")))
-
-    }, [portTheme]);
-
-
-
-    const toggleTheme = (t:Theme) => {
+    const toggleTheme=(t:Theme)=>{
         setTheme(t);
     }
 

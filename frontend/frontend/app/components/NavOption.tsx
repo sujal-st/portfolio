@@ -11,7 +11,7 @@ type PropType={
 
 function NavOption({option}: PropType) {
   return (
-    <a href={option.href} className="px-4 py-1 hover:bg-gray-700 hover:text-white transition rounded-full">
+    <a href={option.href} className="px-4 py-1 font-semibold hover:text-nav-hover-text hover:scale-105 transition rounded-full">
       {option.optionName}
     </a>
   )

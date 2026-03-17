@@ -31,13 +31,18 @@ function Navbar() {
             </div>
 
             {/* mobile version */}
-            <button onClick={() => setMenu(!menu)}>
-                <MenuIcon fontSize='large' className='flex! md:hidden! text-primary' />
-            </button>
+            <div className='flex items-center gap-4'>
+                <div className='flex md:hidden bg-nav-main-bg rounded-full'>
+                    <ThemeToggleButton />
+                </div>
+                <button onClick={() => setMenu(!menu)}>
+                    <MenuIcon fontSize='large' className='flex! md:hidden! text-primary cursor-pointer' />
+                </button>
+            </div>
 
             <div className={`h-full w-60 px-4 py-5 absolute top-0 right-0 bg-nav-main-bg text-base text-primary flex flex-col items-start space-y-5 md:hidden ${menu === false ? "translate-x-500" : "translate-x-0"} transition duration-300`}>
                 <button onClick={() => setMenu(false)} className='w-fit self-end'>
-                    <CloseIcon fontSize='large' className='self-end' />
+                    <CloseIcon fontSize='large' className='self-end cursor-pointer' />
                 </button>
                 {
                     navOptions.map((o) => (
