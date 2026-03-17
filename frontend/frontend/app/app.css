@@ -3,13 +3,40 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* text-primary text-ternary and text-secondary bg-btn-secondary utilities */
+  --color-primary: var(--primary-text-color);
+  --color-secondary: var(--secondary-text-color);
+  --color-ternary: var(--ternary-text-color);
+  --color-btn-primary: var(--primary-btn-color);
+  --color-btn-seconadry: var(--secondary-btn-color);
+
+  /* hover utility for button*/
+  --color-hover-btn-primary: var(--primary-btn-hover-color);
+
+  /* bg-main utility */
+  --color-main-bg: var(--bg-color);
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+:root {
+  --primary-text-color: #d1d5dc;
+  --secondary-text-color: #6102E0;
+  --ternary-text-color: #8e8e8e;
+  --bg-color: #030712;
+  --primary-btn-color: #6102E0;
+  --secondary-btn-color: #101828;
+  --primary-btn-hover-color: #4800C6;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+/* light mode */
+.light {
+  --primary-text-color: #374151; 
+  --secondary-text-color: #6102E0;
+  --bg-color: #EFE6FC;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  transition: background-color 0.2s ease-in-out;
 }
