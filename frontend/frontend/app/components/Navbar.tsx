@@ -17,12 +17,12 @@ function Navbar() {
     ]
 
     return (
-        <>
-        <nav className='max-w-5xl mx-auto mt-5 flex items-center justify-between px-5 overflow-clip'>
+        <div className='sticky top-0 z-50 '>
+        <nav className='max-w-5xl mx-auto flex items-center justify-between px-5 py-5 overflow-clip'>
             <NavLink to="/" className='font-bold text-xl md:text-3xl text-primary'>Sujal Sthapit</NavLink>
 
             {/* large screen */}
-            <div className='hidden md:flex mt-2 bg-nav-main-bg px-5 py-2 w-fit mx-auto border-2 border-gray-500 rounded-4xl items-center gap-5 text-primary text-md'>
+            <div className='hidden md:flex mt-2 bg-nav-main-bg px-5 py-2 w-fit mx-auto border-2 border-gray-500 rounded-4xl items-center gap-5 text-primary text-md shadow-nav-shadow shadow-xs'>
                 <div className='flex gap-10'>
                     {navOptions.map((o) => (
                         <NavOption key={o.href} option={o} />
@@ -52,7 +52,7 @@ function Navbar() {
                     ))
                 }
             </div>
-        </>
+        </div>
     )
 }
 

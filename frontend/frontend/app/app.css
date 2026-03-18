@@ -10,6 +10,7 @@
   --color-ternary: var(--ternary-text-color);
   --color-btn-primary: var(--primary-btn-color);
   --color-btn-seconadry: var(--secondary-btn-color);
+  --color-nav-shadow: var(--nav-shadow);
 
   /* hover utility for button*/
   --color-hover-btn-primary: var(--primary-btn-hover-color);
@@ -22,13 +23,14 @@
 
 .dark {
   --primary-text-color: #d1d5dc;
-  --secondary-text-color: #6102E0;
+  --secondary-text-color: #904EE9;
   --ternary-text-color: #8e8e8e;
   --bg-color: #030712;
   --primary-btn-color: #6102E0;
   --secondary-btn-color: #101828;
   --primary-btn-hover-color: #4800C6;
   --nav-text-hover:#D0B3F6;
+  --nav-shadow: #904EE9;
 
   /* mobile nav css */
   --primary-nav-bg: #101828;
@@ -37,12 +39,14 @@
 /* light mode */
 .light {
   --primary-text-color: #101828; 
-  --secondary-text-color: #6102E0;
+  --secondary-text-color: #904EE9;
   --ternary-text-color: #404653;
   --secondary-btn-color: #D0B3F6;
   --primary-btn-hover-color: #4800C6;
   --bg-color: #EFE6FC;
   --nav-text-hover:#2E00AD;
+  --nav-shadow: #904EE9;
+
   
   /* mobile nav */
   --primary-nav-bg: #D0B3F6;
