@@ -2,6 +2,7 @@ import HeroSection from "~/components/HeroSection";
 import ProjectSection from "~/components/ProjectSection";
 import type { Route } from "./+types/home";
 import ContactSection from "~/components/ContactSection";
+import TechStack from "~/components/TechStack";
 
 
 export function meta({}: Route.MetaArgs) {
@@ -14,6 +15,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return <>
     <HeroSection/>
+    <TechStack/>
     <ProjectSection/>
     <ContactSection/>
   </>;
