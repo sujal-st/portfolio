@@ -19,7 +19,7 @@ function TechStack() {
                 {techStack.map((tech) => (
                     <span key={tech.title} className='flex flex-col items-center gap-2 place-items-stretch'>
                         <img src={tech.logo} className='h-12 w-12 object-contain' alt={tech.title} />
-                        <p className='text-sm text-center'>{tech.title}</p>
+                        <p className='text-sm text-center text-primary font-semibold'>{tech.title}</p>
                     </span>
                 ))}
             </div>
