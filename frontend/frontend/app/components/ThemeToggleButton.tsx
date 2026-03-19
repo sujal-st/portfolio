@@ -1,7 +1,7 @@
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ThemeContext } from '~/contexts/themeContext';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
 function ThemeToggleButton() {
 
@@ -10,10 +10,9 @@ function ThemeToggleButton() {
     useEffect(()=>{
         setMounted(true);
     },[]);
+    const context = useContext(ThemeContext);
 
     if(!mounted) return <div className='w-16'/>
-
-    const context = useContext(ThemeContext);
     if (!context) return null;
     const { portTheme, toggleTheme } = context;
 

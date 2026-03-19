@@ -17,7 +17,7 @@ function Footer() {
         <p className='md:text-lg flex items-center justify-center gap-2'><MailIcon/>sujal.sthapit4@gmail.com</p>
         <p className='min-w-[50vw] mx-auto pb-4 flex items-center justify-center gap-3 border-b-2'>
             {socials.map((s)=>(
-                <a href={s.href} target='_blank'>{s.logo}</a>
+                <a href={s.href} key={s.href} target='_blank'>{s.logo}</a>
             ))}
         </p>
         <div className='flex items-center justify-center text-xs'>

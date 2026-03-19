@@ -23,28 +23,7 @@ function ProjectSection() {
       tech: ['React', 'DnD Kit', 'CSS Modules'],
       img: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&auto=format&fit=crop',
       url: 'https://github.com/example/taskflow',
-    },
-    {
-      title: 'TaskFlow',
-      description: 'A Kanban-style task management board with drag-and-drop columns, priority badges, due-date indicators, and local storage persistence.',
-      tech: ['React', 'DnD Kit', 'CSS Modules'],
-      img: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&auto=format&fit=crop',
-      url: 'https://github.com/example/taskflow',
-    },
-    {
-      title: 'TaskFlow',
-      description: 'A Kanban-style task management board with drag-and-drop columns, priority badges, due-date indicators, and local storage persistence.',
-      tech: ['React', 'DnD Kit', 'CSS Modules'],
-      img: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&auto=format&fit=crop',
-      url: 'https://github.com/example/taskflow',
-    },
-    {
-      title: 'TaskFlow',
-      description: 'A Kanban-style task management board with drag-and-drop columns, priority badges, due-date indicators, and local storage persistence.',
-      tech: ['React', 'DnD Kit', 'CSS Modules'],
-      img: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&auto=format&fit=crop',
-      url: 'https://github.com/example/taskflow',
-    },
+    }
 
   ]
 
@@ -68,7 +47,7 @@ function ProjectSection() {
               <p className="text-ternary line-clamp-2">{p.description}</p>
               <div className="flex flex-wrap gap-2 flex-1">
                 {p.tech.map((t) => (
-                  <span className="bg-main-bg px-2 py-1 rounded-sm text-xs">{t}</span>
+                  <span key={t} className="bg-main-bg px-2 py-1 rounded-sm text-xs">{t}</span>
                 ))}
               </div>
             </div>
