@@ -5,7 +5,7 @@ function ContactSection() {
         <section id="contact" className="max-w-md mx-auto mt-30">
             <h2 className='text-5xl text-primary text-center font-semibold mb-11'>Contact</h2>
 
-            <form action="https://formspree.io/f/mqeynbre" method="post" className="w-full mx-auto p-5 rounded-lg outline-1 outline-ternary">
+            <form action="https://formspree.io/f/mnjgwzgw" method="post" className="w-full mx-auto p-5 rounded-lg outline-1 outline-ternary">
                 <InputField label="name"/>
                 <InputField label="email"/>
                 <div className="flex flex-col gap-2 mb-4">
