@@ -2,7 +2,7 @@ import InputField from "./InputField";
 
 function ContactSection() {
     return (
-        <section id="contact" className="max-w-md mx-auto mt-30">
+        <section id="contact" className="max-w-md mx-auto mt-30 px-5">
             <h2 className='text-5xl text-primary text-center font-semibold mb-11'>Contact</h2>
 
             <form action="https://formspree.io/f/mnjgwzgw" method="post" className="w-full mx-auto p-5 rounded-lg outline-1 outline-ternary">
