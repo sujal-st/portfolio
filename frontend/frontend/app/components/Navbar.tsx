@@ -17,8 +17,8 @@ function Navbar() {
     ]
 
     return (
-        <div className='top-0 z-50 bg-main-bg md:bg-transparent'>
-            <nav className='max-w-5xl mx-auto flex items-center justify-between px-5 py-5 overflow-clip'>
+        <div className='relative z-10'>
+            <nav className='max-w-5xl mx-auto flex items-center justify-between px-5 py-5'>
                 <NavLink to="/" className='font-bold text-xl min-w-fit lg:text-3xl text-primary'>Sujal Sthapit</NavLink>
 
                 {/* large screen */}

@@ -10,7 +10,8 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { PortThemeProvider, ThemeContext } from "./contexts/themeContext";
-import { useContext } from "react";
+import CircularProgress from '@mui/material/CircularProgress';
+import { useServerWakeup } from "./routes/layout/Main";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -50,6 +51,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const {isWaking}= useServerWakeup();
+
+  if(isWaking)
+  {
+    return(
+      <div className="max-w-4xl mx-auto mt-52 flex flex-col items-center space-y-8">
+        <CircularProgress className="text-secondary!"/>
+        <p className="px-5 text-3xl lg:text-3xl text-primary text-center font-semibold">Waking up the server, <br/>please wait for few seconds..</p>
+      </div>
+    )
+  }
   return (
     <PortThemeProvider>
       <Outlet/>
