@@ -44,91 +44,116 @@ export default function AuroraBackground() {
 
         /* ── Dark mode ── */
         .dark {
-          --aurora-c1-inner:  144, 78, 233;   /* #904EE9 — brand violet */
-          --aurora-c1-outer:  97, 2, 224;     /* #6102E0 — deep purple */
-          --aurora-c2-inner:  72, 0, 198;     /* #4800C6 — hover purple */
-          --aurora-c2-outer:  97, 2, 224;     /* #6102E0 */
-          --aurora-c3-inner:  208, 179, 246;  /* #D0B3F6 — lavender */
-          --aurora-c3-outer:  144, 78, 233;   /* #904EE9 */
-          --aurora-c4-inner:  97, 2, 224;     /* #6102E0 */
-          --aurora-c4-outer:  72, 0, 198;     /* #4800C6 */
+          --aurora-blend: screen;
+          --aurora-blur: clamp(50px, 8vw, 100px);
+          --aurora-blur-center: clamp(70px, 10vw, 120px);
           --aurora-opacity-low:  0.45;
           --aurora-opacity-high: 0.75;
-          --aurora-blur: 100px;
+
+          --aurora-c1: radial-gradient(ellipse at 40% 40%,
+            rgba(144, 78, 233, 0.65) 0%,
+            rgba(97, 2, 224, 0.35) 45%,
+            transparent 72%);
+          --aurora-c2: radial-gradient(ellipse at 60% 35%,
+            rgba(72, 0, 198, 0.6) 0%,
+            rgba(97, 2, 224, 0.3) 50%,
+            transparent 74%);
+          --aurora-c3: radial-gradient(ellipse at 50% 55%,
+            rgba(208, 179, 246, 0.5) 0%,
+            rgba(144, 78, 233, 0.25) 52%,
+            transparent 74%);
+          --aurora-c4: radial-gradient(ellipse at 45% 45%,
+            rgba(97, 2, 224, 0.4) 0%,
+            rgba(72, 0, 198, 0.18) 52%,
+            transparent 72%);
         }
 
         /* ── Light mode ── */
         .light {
-          --aurora-c1-inner:  144, 78, 233;   /* #904EE9 */
-          --aurora-c1-outer:  208, 179, 246;  /* #D0B3F6 — soft lavender */
-          --aurora-c2-inner:  208, 179, 246;  /* #D0B3F6 */
-          --aurora-c2-outer:  144, 78, 233;   /* #904EE9 */
-          --aurora-c3-inner:  46, 0, 173;     /* #2E00AD — deep indigo */
-          --aurora-c3-outer:  208, 179, 246;  /* #D0B3F6 */
-          --aurora-c4-inner:  144, 78, 233;   /* #904EE9 */
-          --aurora-c4-outer:  46, 0, 173;     /* #2E00AD */
-          --aurora-opacity-low:  0.25;
-          --aurora-opacity-high: 0.45;
-          --aurora-blur: 110px;
+          --aurora-blend: multiply;
+          --aurora-blur: clamp(45px, 7vw, 90px);
+          --aurora-blur-center: clamp(65px, 9vw, 110px);
+          --aurora-opacity-low:  0.6;
+          --aurora-opacity-high: 0.85;
+
+          --aurora-c1: radial-gradient(ellipse at 40% 40%,
+            rgba(144, 78, 233, 0.55) 0%,
+            rgba(208, 179, 246, 0.35) 45%,
+            transparent 72%);
+          --aurora-c2: radial-gradient(ellipse at 60% 35%,
+            rgba(97, 2, 224, 0.5) 0%,
+            rgba(144, 78, 233, 0.3) 50%,
+            transparent 74%);
+          --aurora-c3: radial-gradient(ellipse at 50% 55%,
+            rgba(208, 179, 246, 0.65) 0%,
+            rgba(144, 78, 233, 0.35) 52%,
+            transparent 74%);
+          --aurora-c4: radial-gradient(ellipse at 45% 45%,
+            rgba(46, 0, 173, 0.4) 0%,
+            rgba(144, 78, 233, 0.2) 52%,
+            transparent 72%);
         }
 
         .aurora-blob {
           position: absolute;
           border-radius: 50%;
-          mix-blend-mode: screen;
-          transition: background 0.4s ease, opacity 0.4s ease;
+          mix-blend-mode: var(--aurora-blend);
+          transition: opacity 0.4s ease;
         }
 
+        /* ── Mobile first (base) ── */
         .aurora-blob-1 {
-          width: 700px; height: 540px;
-          top: -12%; left: -10%;
+          /* covers full width + bleeds off top-left */
+          width: 120vw; height: 60vw;
+          top: -10%; left: -15%;
           filter: blur(var(--aurora-blur));
-          background: radial-gradient(ellipse at 40% 40%,
-            rgba(var(--aurora-c1-inner), 0.65) 0%,
-            rgba(var(--aurora-c1-outer), 0.35) 45%,
-            transparent 72%);
+          background: var(--aurora-c1);
           animation:
             aurora-drift-1 18s ease-in-out infinite,
             aurora-pulse 9s ease-in-out infinite;
         }
-
         .aurora-blob-2 {
-          width: 600px; height: 500px;
-          top: 0%; right: -12%;
+          width: 100vw; height: 55vw;
+          top: 5%; right: -15%;
           filter: blur(var(--aurora-blur));
-          background: radial-gradient(ellipse at 60% 35%,
-            rgba(var(--aurora-c2-inner), 0.6) 0%,
-            rgba(var(--aurora-c2-outer), 0.3) 50%,
-            transparent 74%);
+          background: var(--aurora-c2);
           animation:
             aurora-drift-2 22s ease-in-out infinite,
             aurora-pulse 12s ease-in-out infinite 2s;
         }
-
         .aurora-blob-3 {
-          width: 520px; height: 420px;
-          bottom: 0%; left: 18%;
+          width: 90vw; height: 50vw;
+          bottom: 5%; left: 5%;
           filter: blur(var(--aurora-blur));
-          background: radial-gradient(ellipse at 50% 55%,
-            rgba(var(--aurora-c3-inner), 0.5) 0%,
-            rgba(var(--aurora-c3-outer), 0.25) 52%,
-            transparent 74%);
+          background: var(--aurora-c3);
           animation:
             aurora-drift-3 26s ease-in-out infinite,
             aurora-pulse 14s ease-in-out infinite 4s;
         }
-
         .aurora-blob-4 {
-          width: 460px; height: 360px;
-          top: 28%; left: 32%;
-          filter: blur(calc(var(--aurora-blur) + 20px));
-          background: radial-gradient(ellipse at 45% 45%,
-            rgba(var(--aurora-c4-inner), 0.4) 0%,
-            rgba(var(--aurora-c4-outer), 0.18) 52%,
-            transparent 72%);
+          width: 80vw; height: 45vw;
+          top: 30%; left: 10%;
+          filter: blur(var(--aurora-blur-center));
+          background: var(--aurora-c4);
           animation:
             aurora-drift-4 20s ease-in-out infinite,
             aurora-pulse 11s ease-in-out infinite 1s;
+        }
+
+        /* ── Tablet (640px+) ── */
+        @media (min-width: 640px) {
+          .aurora-blob-1 { width: 90vw;  height: 55vw; top: -12%; left: -10%; }
+          .aurora-blob-2 { width: 75vw;  height: 50vw; top: 0%;   right: -10%; }
+          .aurora-blob-3 { width: 65vw;  height: 45vw; bottom: 3%; left: 12%; }
+          .aurora-blob-4 { width: 55vw;  height: 40vw; top: 28%;  left: 22%; }
+        }
+
+        /* ── Desktop (1024px+) ── */
+        @media (min-width: 1024px) {
+          .aurora-blob-1 { width: 700px; height: 540px; top: -12%; left: -10%; }
+          .aurora-blob-2 { width: 600px; height: 500px; top: 0%;   right: -12%; }
+          .aurora-blob-3 { width: 520px; height: 420px; bottom: 0%; left: 18%; }
+          .aurora-blob-4 { width: 460px; height: 360px; top: 28%;  left: 32%; }
         }
 
         .aurora-grain {

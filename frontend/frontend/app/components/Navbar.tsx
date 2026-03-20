@@ -19,7 +19,10 @@ function Navbar() {
     return (
         <div className='relative z-10'>
             <nav className='max-w-5xl mx-auto flex items-center justify-between px-5 py-5'>
-                <NavLink to="/" className='font-bold text-xl min-w-fit lg:text-3xl text-primary'>Sujal Sthapit</NavLink>
+                <NavLink to="/" className='flex items-center gap-2'>
+                    <img src="/favicon.png" alt="Sujal Sthapit" className='w-8 h-8' />
+                    <span className='font-bold text-xl lg:text-3xl text-primary'>Sujal Sthapit</span>
+                </NavLink>
 
                 {/* large screen */}
                 <div className='hidden lg:flex mt-2 bg-nav-main-bg px-5 py-2 w-fit mx-auto border-2 border-gray-500 rounded-4xl items-center gap-5 text-primary text-md shadow-nav-shadow shadow-xs'>
