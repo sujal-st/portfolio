@@ -15,7 +15,7 @@ export function meta({}: Route.MetaArgs) {
 
 export async function loader({request}:Route.LoaderArgs){
 
-  const projectRes= await fetch(`http://localhost:1337/api/projects?populate=*`);
+  const projectRes= await fetch(`${import.meta.env.VITE_API_URL}/api/projects?populate=*`);
 
 
   if(!projectRes) throw new Error("Failed to fetch projects")
