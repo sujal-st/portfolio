@@ -1,12 +1,15 @@
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import CtaButtons from './CtaButtons';
+import AuroraBackground from './Aurorabackground';
 
 function HeroSection() {
 
     const buttons=['primary','secondary']
 
     return (
-        <section className='max-w-xl max-h-screen mx-auto mt-30 text-center'>
+        <>
+        <AuroraBackground/>
+        <section className='max-w-xl max-h-screen mx-auto mt-30 text-center z-5'>
             <p className="text-ternary text-base md:text-lg mb-5">Front-end Developer</p>
             <h1 className='text-primary text-3xl md:text-5xl font-bold mb-5'>
                 <span className='block text-5xl md:text-7xl mb-3'>Sujal Sthapit</span>
@@ -20,6 +23,7 @@ function HeroSection() {
                 ))}
             </div>
         </section>
+        </>
     )
 }
 

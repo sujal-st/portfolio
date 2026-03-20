@@ -12,7 +12,7 @@ function TechStack() {
         { logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', title: 'Express' },
     ]
     return (
-        <section id="stacks" className="max-w-2xl mx-auto mt-30 px-10">
+        <section id="stacks" className="max-w-2xl mx-auto mt-30 px-10 z-5">
             <h2 className='text-5xl text-primary text-center font-semibold mb-11'>Tech Stack</h2>
 
             <div className='py-4 bg-nav-main-bg grid grid-cols-3 md:grid-cols-4 items-center gap-6 rounded-xl'>

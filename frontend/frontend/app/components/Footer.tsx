@@ -11,7 +11,7 @@ function Footer() {
         {logo:<InstagramIcon fontSize='medium'/>,href:"#"}
     ]
   return (
-    <footer className='bg-nav-main-bg max-w-screen mt-8 py-6 text-center flex flex-col space-y-4 z-50'>
+    <footer className='bg-nav-main-bg max-w-screen mt-8 py-6 text-center flex flex-col space-y-4 z-10'>
         <h2 className='text-2xl md:text-3xl font-semibold'>Let's Connect</h2>
         <p className='max-w-xs md:max-w-xl mx-auto text-base md:text-xl'>I'm always open to discussing new projects, creative ideas, or opportunities to build something together.</p>
         <p className='md:text-lg flex items-center justify-center gap-2'><MailIcon/>sujal.sthapit4@gmail.com</p>

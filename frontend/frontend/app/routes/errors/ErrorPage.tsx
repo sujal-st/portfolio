@@ -1,5 +1,4 @@
 import { NavLink } from "react-router"
-import LightRays from "~/components/LightRays"
 
 function ErrorPage() {
   return (
