@@ -9,8 +9,8 @@ function HeroSection() {
     return (
         <>
         <AuroraBackground/>
-        <section className='max-w-xl max-h-screen mx-auto mt-30 text-center z-5'>
-            <p className="text-ternary text-base md:text-lg mb-5">Front-end Developer</p>
+        <section className='max-w-xl max-h-screen mx-auto mt-20 text-center z-5'>
+            <p className="text-ternary text-base md:text-lg mb-5 ">Front-end Developer</p>
             <h1 className='text-primary text-3xl md:text-5xl font-bold mb-5'>
                 <span className='block text-5xl md:text-7xl mb-3'>Sujal Sthapit</span>
                 <span className='text-ternary'>I build things</span>
